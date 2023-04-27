@@ -1,0 +1,17 @@
+.field,
+.field__input {
+  display: block;
+  margin-block: 0.875rem;
+}
+
+.field__input {
+  inline-size: 250px;
+  padding: 0.75rem;
+  border: 2px solid gray;
+  transition: all 0.2s;
+  outline: none;
+
+  &:focus {
+    border: 2px solid lightskyblue;
+  }
+}
