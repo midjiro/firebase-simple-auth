@@ -69,7 +69,7 @@ class AuthForm {
   }
 
   async #checkAuthState(user) {
-    let alert = new Alert("Welcome back! You are successfully logged in.");
+    let alert = new Alert("Welcome on board! You authenticated successfully.");
     user ? alert.show() : null;
   }
 }
