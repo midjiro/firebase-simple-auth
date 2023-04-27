@@ -23,11 +23,17 @@ class AuthForm {
       case "auth/email-already-in-use":
         alert.message = "Email is already in use.";
         break;
+
       case "auth/missing-email":
         alert.message = "Please fill the email field.";
         break;
+
       case "auth/missing-password":
         alert.message = "Please fill the password field.";
+        break;
+
+      case "auth/weak-password":
+        alert.message = "Password length must be at least 6 characters.";
         break;
 
       // Login errors
@@ -45,6 +51,7 @@ class AuthForm {
 
       default:
         alert.message = "Something went wrong. Please contact us.";
+        console.error(error.code, error.message);
         break;
     }
 
