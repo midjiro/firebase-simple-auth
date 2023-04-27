@@ -6,7 +6,6 @@ class AuthForm {
   constructor(formSelector, fieldSelector, triggerSelector) {
     this.form = document.querySelector(formSelector);
     this.fields = this.form.querySelectorAll(fieldSelector);
-    console.log(this.fields);
     this.trigger = document.querySelector(triggerSelector);
 
     this.form.addEventListener("submit", (e) => {
@@ -18,8 +17,6 @@ class AuthForm {
 
   handleError(error) {
     let alert = new Alert();
-
-    console.log(error.code, typeof error.code);
 
     switch (error.code) {
       // Registration errors

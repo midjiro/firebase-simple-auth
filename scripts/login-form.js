@@ -13,7 +13,7 @@ class LoginForm extends AuthForm {
     try {
       await signInWithEmailAndPassword(AUTH, this.email, this.password);
       let alert = new Alert("Logged in successfully");
-      alert.show();
+      alert.show("success");
     } catch (e) {
       this.handleError(e);
     }
